@@ -32,6 +32,7 @@ var LibrarySchema = mongoose.Schema({
         enum: Category  //开源库的分类
     },
     author:String,  //开源库作者
+    avatar:String,  //开源库作者头像
     github_star:{
         type:Number,
         default:0
