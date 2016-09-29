@@ -5,6 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var mongoose = require('mongoose')
+mongoose.Promise = require('bluebird')
+mongoose.connect('mongodb://localhost/androidcat')
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
