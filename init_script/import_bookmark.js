@@ -7,6 +7,9 @@ var bookmarkData = require('../old_data/cat.json')
 mongoose.Promise = require('bluebird')
 mongoose.connect('mongodb://localhost/androidcat')
 
+var bookmarkPrefix = "bk_"
+var bookmarkid = 0
+
 
 // {
 //       "updatedAt": "2016-09-27T07:37:28.933Z",
@@ -27,7 +30,9 @@ mongoose.connect('mongodb://localhost/androidcat')
 //       "tag": "tool"
 //     }
 bookmarkData.forEach(function(element) {
+
     var bookmark = new Bookmark({
+        id:bookmarkPrefix+bookmarkid,
         name:element.title,
         detail:element.desc,
         icon:element.icon,
@@ -35,6 +40,8 @@ bookmarkData.forEach(function(element) {
         onclick:element.hit,
         tag:[element.tag]
     })
+
+    bookmarkid++
 
     bookmark.save().then(function(bookmark){
         console.log('success')
