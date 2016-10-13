@@ -29,13 +29,22 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies', 'ngTouch',
           title: 'Profile'
         }
       })
-      .state('home.table', {
-        url: '/table',
-        controller: 'TableController',
+      .state('home.library', {
+        url: '/library',
+        controller: 'LibraryController',
         controllerAs: 'vm',
-        templateUrl: 'app/views/table.html',
+        templateUrl: 'app/views/library.html',
         data: {
-          title: 'Table'
+          title: 'Library'
+        }
+      })
+      .state('home.bookmark', {
+        url: '/bookmark',
+        controller: 'BookmarkController',
+        controllerAs: 'vm',
+        templateUrl: 'app/views/bookmark.html',
+        data: {
+          title: 'Bookmark'
         }
       });
 

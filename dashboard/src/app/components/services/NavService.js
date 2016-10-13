@@ -10,19 +10,24 @@
   function navService($q){
     var menuItems = [
       {
-        name: 'Dashboard',
+        name: '主页',
         icon: 'dashboard',
         sref: '.dashboard'
       },
       {
-        name: 'Profile',
+        name: 'User',
         icon: 'person',
         sref: '.profile'
       },
       {
-        name: 'Table',
+        name: 'Library',
         icon: 'view_module',
-        sref: '.table'
+        sref: '.library'
+      },
+      {
+        name: 'Bookmark',
+        icon: 'view_module',
+        sref: '.bookmark'
       }
     ];
 
